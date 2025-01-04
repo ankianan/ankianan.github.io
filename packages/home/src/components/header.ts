@@ -1,6 +1,5 @@
 import { LitElement, css, html } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
-import { resolveRouterPath } from '../router';
 
 import '@shoelace-style/shoelace/dist/components/button/button.js';
 @customElement('app-header')
@@ -61,7 +60,7 @@ export class AppHeader extends LitElement {
       <header>
 
         <div id="back-button-block">
-          ${this.enableBack ? html`<sl-button size="small" href="${resolveRouterPath()}">
+          ${this.enableBack ? html`<sl-button size="small" href="javascript:history.back()">
             Back
           </sl-button>` : null}
 

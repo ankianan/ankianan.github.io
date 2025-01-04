@@ -9,8 +9,6 @@ import { styles as sharedStyles } from '../../styles/shared-styles'
 
 import '@shoelace-style/shoelace/dist/components/card/card.js';
 
-import 'littlechef/src/components/lc-dragdrop.ts';
-
 @customElement('app-littlechef')
 export class AppAbout extends LitElement {
   static styles = [
@@ -20,7 +18,7 @@ export class AppAbout extends LitElement {
 
   render() {
     return html`
-      <app-header ?enableBack="${true}"></app-header>
+      <app-header></app-header>
 
       <main>
         <h2>Littchef</h2>
@@ -31,8 +29,8 @@ export class AppAbout extends LitElement {
           <p>Takes 5 mintues to cook
           </p>
 
-          <p>Order now <a
-              href="/orders/burgers">Chezzy burger</a></p>
+          <p>Cook now <a
+              href="littlechef/drag-drop">Chezzy burger</a></p>
         </sl-card>
         <sl-card>
           <h2>French fries</h2>
@@ -40,10 +38,10 @@ export class AppAbout extends LitElement {
           <p>Takes 5 mintues to cook
           </p>
 
-          <p>Order now <a
-              href="/orders/frenchfries">French fries</a></p>
+          <p>Cook now <a
+              href="littlechef/drag-drop">French fries</a></p>
         </sl-card>
-        <app-lc-drag-drop></app-lc-drag-drop>
+        <lc-drag-drop></app-lc-drag-drop>
       </main>
     `;
   }

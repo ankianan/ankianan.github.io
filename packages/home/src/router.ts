@@ -33,11 +33,19 @@ export const router = new Router({
       },
       {
         path: resolveRouterPath('littlechef'),
-        title: 'About',
+        title: 'Little Chef',
         plugins: [
-          lazy(() => import('./pages/app-littlechef/app-littlechef.js')),
+          lazy(() => import('littlechef/src/pages/app-littlechef/app-littlechef.js')),
         ],
         render: () => html`<app-littlechef></app-littlechef>`
+      },
+      {
+        path: resolveRouterPath('littlechef/drag-drop'),
+        title: 'Little Chef Playground',
+        plugins: [
+          lazy(() => import('littlechef/src/pages/app-drag-drop/app-drag-drop.js')),
+        ],
+        render: () => html`<app-drag-drop></app-drag-drop>`
       },
       {
         path: resolveRouterPath('handmado'),

@@ -1,8 +1,8 @@
-import { LitElement, PropertyValues, css, html } from 'lit';
+import { LitElement, css, html } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
 
 import '@shoelace-style/shoelace/dist/components/button/button.js';
-import { DragStartEvent, Droppable } from '@shopify/draggable';
+import { Droppable } from '@shopify/draggable';
 @customElement('app-lc-drag-drop')
 export class DragDrop extends LitElement {
   @property({ type: String }) title = 'DragDrop';

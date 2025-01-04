@@ -39,7 +39,6 @@ jobs:
           node-version: 16
       - run: npm i --workspaces
       - run: npm run build -w packages/home
-      - run: npm run ghpage:spa-fix -w packages/home
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

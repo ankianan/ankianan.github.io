@@ -83,13 +83,14 @@ export class AppHome extends LitElement {
             </div>
 
             <p id="mainInfo">
-              <a href="/littlechef">Littchef</a>
-              Kids can order and learn how to cook a dish <br><br>
-              <a href="/handmado">Handmado</a>
-              Buy hand made items from local sellers near you
+              Hi, my name is Ankit Anand and I like programming. <br><br>
+
+              I have worked using C, C++, Java, JS. <br><br>
+
+              I am fan of Nirvana band.
             </p>
 
-          <sl-button href="${resolveRouterPath('about')}" variant="primary">Navigate to About</sl-button>
+          <sl-button href="https://www.linkedin.com/in/ankit90anand/" variant="primary">Linkedin</sl-button>
         </div>
       </main>
     `;

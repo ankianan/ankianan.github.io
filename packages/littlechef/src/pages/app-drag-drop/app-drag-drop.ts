@@ -28,25 +28,24 @@ export class DragDrop extends LitElement {
         display: flex;
         gap: 1rem;
       }
-      .BlockLayout.hoz {
-        height: 8rem;
-      }
       .BlockLayout.vert {
         width: 8rem;
+        
+        .BlockWrapper  {
+          filter: grayscale(1);
+          &:has(.Block--isDraggable) {
+            filter: grayscale(0);
+          }
+        }
       }
       .BlockWrapper img {
         width: 8rem;
         height: 8rem;
       }  
+      
     </style>
     <div id="UniqueDropzone">
-      <div class="BlockLayout hoz">
-        ${[svg0, svg1, svg2, svg3].map((svg, index)=>{
-          return `<div class="BlockWrapper BlockWrapper--isDropzone draggable-dropzone--occupied" data-dropzone="${index}">
-              <img src="${svg}" tabindex="0" class="Block--isDraggable">
-            </div>`
-        }).join('')}
-      </div>
+      
       <div class="BlockLayout vert">
         <?xml version="1.0" encoding="iso-8859-1"?>
         <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -108,6 +107,13 @@ export class DragDrop extends LitElement {
           <rect x="319.459" y="107.004" style="fill:#53180F;" width="23.749" height="15.208"/>
         </g>
         </svg>
+      </div>
+      <div class="BlockLayout hoz">
+        ${[svg0, svg1, svg2, svg3].map((svg, index)=>{
+          return `<div class="BlockWrapper BlockWrapper--isDropzone draggable-dropzone--occupied" data-dropzone="${index}">
+              <img src="${svg}" tabindex="0" class="Block--isDraggable">
+            </div>`
+        }).join('')}
       </div>
     </div>`);
   }

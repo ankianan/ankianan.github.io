@@ -27,6 +27,7 @@ export class DragDrop extends LitElement {
       .BlockLayout {
         display: flex;
         gap: 1rem;
+        flex-wrap: wrap
       }
       .BlockLayout.vert {
         width: 8rem;
